@@ -1,0 +1,5 @@
+@each $color-name, $color-value in $all-colors {
+	.color--#{inspect($color-name)} {
+		color: $color-value;
+	}
+}

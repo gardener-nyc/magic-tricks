@@ -1,0 +1,13 @@
+@each $color-name, $color-value in $all-colors {
+	.b--#{inspect($color-name)} {
+		border: 1px solid $color-value;
+	}
+}
+
+@each $color-name, $color-value in $all-colors {
+	@each $side-name, $side-direction in $sides {
+		.b#{inspect($side-name)}--#{inspect($color-name)} {
+			border-#{$side-direction}: 1px solid $color-value;
+		}
+	}
+}

@@ -1,0 +1,48 @@
+$sides: (
+	t : top,
+	b : bottom,
+	l : left,
+	r : right
+);
+
+@for $i from 0 through $spacer-max {
+	.m#{$i} { margin:  $i * $spacer-size; }
+	.p#{$i} { padding: $i * $spacer-size; }
+}
+
+@for $i from 0 through $spacer-max {
+	@each $side-name, $side-direction in $sides {
+		.m#{$side-name}#{$i} {
+			margin-#{$side-direction}: $i * $spacer-size;
+		}
+		
+		.p#{$side-name}#{$i} {
+			padding-#{$side-direction}: $i * $spacer-size;
+		}
+	}
+}
+
+@for $i from 0 through $spacer-max {
+	@each $breakpoint-name, $breakpoint-size in $breakpoints {
+		@media (min-width: #{$breakpoint-size}) {
+			.m#{$i}--#{$breakpoint-name} { margin:  $i * $spacer-size; }
+			.p#{$i}--#{$breakpoint-name} { padding: $i * $spacer-size; }
+		}
+	}
+}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		@for $i from 0 through $spacer-max {
+			@each $side-name, $side-direction in $sides {
+				.m#{$side-name}#{$i}--#{$breakpoint-name} {
+					margin-#{$side-direction}: $i * $spacer-size;
+				}
+				
+				.p#{$side-name}#{$i}--#{$breakpoint-name} {
+					padding-#{$side-direction}: $i * $spacer-size;
+				}
+			}
+		}
+	}
+}

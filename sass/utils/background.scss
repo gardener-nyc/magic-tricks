@@ -1,0 +1,11 @@
+@each $color-name, $color-value in $all-colors {
+	.bg--#{inspect($color-name)} {
+		background-color: $color-value;
+	}
+}
+
+.bg--cover {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}

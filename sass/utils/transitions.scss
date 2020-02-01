@@ -1,0 +1,4 @@
+.disable-transitions {
+	transition: none !important;
+	* { transition: none !important; }
+}

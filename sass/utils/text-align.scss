@@ -1,0 +1,15 @@
+@each $alignment-name, $alignment-direction in $alignments {
+	.t#{$alignment-name} {
+		text-align: #{$alignment-direction};
+	}
+}
+
+@each $alignment-name, $alignment-direction in $alignments {
+	@each $breakpoint-name, $breakpoint-size in $breakpoints {
+		@media (min-width: #{$breakpoint-size}) {
+			.t#{$alignment-name}--#{$breakpoint-name} {
+				text-align: #{$alignment-direction};
+			}
+		}
+	}
+}

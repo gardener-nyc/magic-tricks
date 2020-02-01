@@ -1,0 +1,81 @@
+@mixin font-smoothing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+@mixin multiLineEllipsis($line-height, $lines-to-show) {
+	display: block; /* Fallback for non-webkit */
+	max-height: $line-height * $lines-to-show; /* Fallback for non-webkit */
+	display: -webkit-box;
+	-webkit-line-clamp: $lines-to-show;
+	/* autoprefixer: ignore next */
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+@mixin selection {
+	&::-moz-selection { @content; }
+	&::selection { @content; }
+}
+
+@mixin placeholder {
+	&::-webkit-input-placeholder { @content; }
+	&::-moz-placeholder { @content; }
+	&:-ms-input-placeholder { @content; }
+	&:-moz-placeholder { @content; }
+}
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+@mixin scrollbar($scrollbar-height: 5px, $scrollbar-padding: 0px, $thumb-color: black, $track-color: gray) {
+	&::-webkit-scrollbar {
+		height: (($scrollbar-padding * 2) + $scrollbar-height);
+		background-color: rgba(255,255,255,0);
+		cursor: move;
+	}
+
+	&::-webkit-scrollbar-track,
+	&::-webkit-scrollbar-thumb {
+		border: $scrollbar-padding solid rgba(255,255,255,0);
+		background-clip: padding-box;
+	}
+
+	&::-webkit-scrollbar-track {
+		background-color: $track-color;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: $thumb-color;
+		border: $scrollbar-padding solid rgba(255,255,255,0);
+	}
+}
+
+@mixin aspect-ratio($width: 1, $height: 1) {
+	height: 0;
+	padding-bottom: ($height / $width) * 100%;
+
+	.aspect__content {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+	}
+}
+
+@mixin body-font-size {
+	font-size: $font-size-body-mobile;
+	line-height: $line-height-body-mobile;
+
+	@include breakpoint(#{$typography-breakpoint}) {
+		font-size: $font-size-body-desktop;
+		line-height: $line-height-body-desktop;
+	}
+}

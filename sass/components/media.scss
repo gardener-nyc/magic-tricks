@@ -1,0 +1,77 @@
+.media {
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
+}
+
+.media.media--horizontal {
+	flex-direction: row;
+}
+
+.media.media--vertical {
+	flex-direction: column;
+	
+	> .media__fixed,
+	> .media__fluid {
+		width: 100%;
+	}
+}
+
+.media__fluid {
+	flex: 1;
+	min-width: 1px; // https://stackoverflow.com/questions/36150458/flex-item-overflows-container-due-to-long-word-even-after-using-word-wrap
+	min-height: 1px;
+}
+
+.media--reverse {
+	> .media__fixed {
+		order: 1;
+	}
+}
+
+//
+// === Align ===
+//
+
+
+.media.align--top {
+	align-items: flex-start;
+}
+
+.media.align--middle {
+	align-items: center;
+}
+
+.media.align--bottom {
+	align-items: flex-end;
+}
+
+//
+// === Gutter ===
+//
+
+@each $gutter-name, $gutter-size in $grid-gutter-extra {
+	.media.media--horizontal.media--forward.gutter--#{$gutter-name} {
+		> .media__fixed {
+			margin-right: $gutter-size;
+		}
+	}
+	
+	.media.media--horizontal.media--reverse.gutter--#{$gutter-name} {
+		> .media__fixed {
+			margin-left: $gutter-size;
+		}
+	}
+	
+	.media.media--vertical.media--forward.gutter--#{$gutter-name} {
+		> .media__fixed {
+			margin-bottom: $gutter-size;
+		}
+	}
+	
+	.media.media--vertical.media--reverse.gutter--#{$gutter-name} {
+		> .media__fixed {
+			margin-top: $gutter-size;
+		}
+	}
+} 

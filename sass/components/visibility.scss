@@ -1,0 +1,12 @@
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	.show--#{$breakpoint-name} {
+		@media (max-width: #{$breakpoint-size - 1px}) {
+			display: none !important;
+		}
+	}
+	@media (min-width: #{$breakpoint-size}) {
+		.hide--#{$breakpoint-name} {
+			display: none !important;
+		}
+	}
+}

@@ -1,0 +1,102 @@
+//
+// === Directions ===
+//
+
+$sides: (
+	t : top,
+	b : bottom,
+	l : left,
+	r : right,
+	j : justify,
+);
+
+$alignments: (
+	l : left,
+	r : right,
+	c : center,
+);
+
+//
+// === Colors ===
+//
+
+$all-colors: (
+	white         : #FFF,
+	black         : #000,
+);
+
+@function color($color-name) {
+	$color-found: map-has-key($all-colors, $color-name);
+	@if ($color-found == true) {
+		@return map-get($all-colors, $color-name);
+	} @else {
+		@warn "Color " + #{$color-name} + " doesn't exist.";
+	}
+}
+
+//
+// === Breakpoints ===
+//
+
+$breakpoints : (
+	xs  : 400px,
+	sm  : 600px,
+	md  : 800px,
+	lg  : 1000px,
+	xl  : 1200px,
+);
+
+@mixin breakpoint($size) {
+	$breakpoint-found: map-has-key($breakpoints, $size);
+	@if ($breakpoint-found == true) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media (min-width: #{$breakpoint}) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint size " + #{$size} + " doesn't exist.";
+	}
+}
+
+//
+// === Components ===
+//
+
+// Spacer
+$spacer-max: 10;
+$spacer-size: 10px;
+
+// Grid
+$grid-breakpoint: md;
+$grid-column-size: 12;
+$grid-gutter-mobile: 10px;
+$grid-gutter-desktop: 10px;
+
+$grid-gutter-extra: (
+	none : 0px,
+);
+
+$grid-padding-mobile: 10px;
+$grid-padding-desktop: 20px;
+$grid-max-width: 1920px;
+
+@function gutter($gutter-name) {
+	$gutter-found: map-has-key($grid-gutter-extra, $gutter-name);
+	@if ($gutter-found == true) {
+		@return map-get($grid-gutter-extra, $gutter-name);
+	} @else {
+		@warn "Gutter " + #{$gutter-name} + " doesn't exist.";
+	}
+}
+
+//
+// === Typography ===
+//
+
+$typography-breakpoint: md;
+
+$font-size-body-mobile: 16px;
+$font-size-body-desktop: 16px;
+
+$line-height-body-mobile: 24px;
+$line-height-body-desktop: 24px;

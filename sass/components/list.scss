@@ -1,0 +1,125 @@
+.list {
+	margin:  0;
+	padding: 0;
+	list-style: none;
+	font-size: 0;
+	line-height: 0;
+}
+
+.list--scroll {
+	white-space: nowrap;
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+
+	.list__item {
+		white-space: initial;
+	}
+}
+
+.list__item {
+	@include body-font-size;
+}
+
+// Inline
+.list--horizontal {
+	> .list__item {
+		display: inline-block;
+		margin-right: $grid-gutter-desktop;
+		
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+	
+	&.gutter--vertical {
+		margin-bottom: -$grid-gutter-desktop;
+		> .list__item {
+			margin-bottom: $grid-gutter-desktop;
+		}
+	}
+}
+
+// Block List
+.list--vertical {
+	> .list__item {
+		display: block;
+		margin-bottom: $grid-gutter-desktop;
+		
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+// Vertical Align
+.list.align--middle {
+	> .list__item {
+		vertical-align: middle;
+	}
+}
+
+// Extra Gutter Sizes
+@each $gutter-name, $gutter-size in $grid-gutter-extra {
+	.list--vertical.gutter--#{$gutter-name} {
+		> .list__item {
+			margin-bottom: $gutter-size;
+			
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+	
+	.list--horizontal.gutter--#{$gutter-name} {
+		> .list__item {
+			margin-right: $gutter-size;
+			
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+		
+		&.gutter--vertical {
+			margin-bottom: -$gutter-size;
+			> .list__item {
+				margin-bottom: $gutter-size;
+			}
+		}
+	}
+}
+
+// Responsive Orientation
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		.list--horizontal--#{$breakpoint-name} {
+			> .list__item {
+				display: inline-block;
+				margin-right: $grid-gutter-desktop;
+				
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+			
+			&.gutter--vertical {
+				margin-bottom: -$grid-gutter-desktop;
+				
+				> .list__item {
+					margin-bottom: $grid-gutter-desktop;
+				}
+			}
+		}
+
+		// Block List
+		.list--vertical--#{$breakpoint-name} {
+			> .list__item {
+				display: block;
+				margin-bottom: $grid-gutter-desktop;
+				
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+}
