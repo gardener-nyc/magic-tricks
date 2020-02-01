@@ -1,3 +1,3 @@
 # Magic Tricks
 
-Utility belt of magic tricks
+Utility belt of magic tricks.

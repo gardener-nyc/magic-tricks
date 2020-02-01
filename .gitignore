@@ -1,0 +1,6 @@
+.DS_Store
+*.map
+node_modules/
+.yarn-cache/
+dist
+lib
