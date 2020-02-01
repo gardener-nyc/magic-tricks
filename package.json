@@ -1,6 +1,6 @@
 {
   "name": "magic-tricks",
-  "version": "0.1.2",
+  "version": "0.1.7",
   "description": "Utility belt of magic tricks",
   "main": "index.js",
   "repository": "git@github.com:gardener-nyc/magic-tricks.git",
@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "release": "yarn build && yarn publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
