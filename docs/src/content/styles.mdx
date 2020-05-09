@@ -149,7 +149,7 @@ $line-height-body-desktop: 24px;
 
 ## Reset
 
-There is a complete CSS reset included in magic tricks. It resets all block/inline elements to remove padding/margin etc. _It does not reset the button element._
+There is a complete CSS reset included in magic tricks. It resets all block/inline elements to remove padding/margin etc. _It does not reset the button or input elements._
 
 ```scss
 @import '~magic-tricks/sass/reset';
@@ -163,22 +163,86 @@ There is a complete CSS reset included in magic tricks. It resets all block/inli
 @import '~magic-tricks/sass/mixins';
 ```
 
+<br/>
+
 ```scss
-@mixin font-smoothing() {} // forces font antialiacing
+@mixin font-smoothing() {}
+```
 
+<div className="row">
+	<div className="col c6">
+		<div className="example example--font-smoothing-off">
+			Without font smoothing.
+		</div>
+	</div>
+	<div className="col c6">
+		<div className="example">
+			Without font smoothing.
+		</div>
+	</div>
+</div>
+
+
+```scss
 @mixin multiLineEllipsis($line-height, $lines-to-show) {} // allows for a multi-line ellipsis
+```
 
+<div className="example">
+	<div className="example--mle">
+		Maecenas sed diam eget risus varius blandit sit amet non magna. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Sed posuere consectetur est at lobortis. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Maecenas sed diam eget risus varius blandit sit amet non magna. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+	</div>
+</div>
+
+```scss
 @mixin selection() {} // targets text selection for styling
+```
 
+<div className="example">
+	<div className="example--select">
+		Select me
+	</div>
+</div>
+
+```scss
 @mixin placeholder() {} // targets placeholder for styling
+```
 
+<div className="example">
+	<input
+		placeholder="I'm a placeholder"
+		className="example--placeholder"
+	/>
+</div>
+
+```scss
 @mixin clearfix() {} // clears all child floats
+```
 
+<div className="row">
+	<div className="col c6">
+		<div className="example">
+			<p className="fl">Without clear</p>
+		</div>
+	</div>
+	<div className="col c6">
+		<div className="example example--clear">
+			<p className="fl">With clear</p>
+		</div>
+	</div>
+</div>
+
+```scss
 @mixin scrollbar($scrollbar-height: 5px, $scrollbar-padding: 0px, $thumb-color: black, $track-color: gray) {} // styles overflow scrollbars
+```
 
+
+
+```scss
 @mixin aspect-ratio($width: 1, $height: 1) {} // forces an aspect ratio for a div
 	.aspect__content {} // Use this class to display content within a forced aspect div
+```
 
+```scss
 @mixin body-font-size() {} // responsive body size with a single breakpoint
 ```
 

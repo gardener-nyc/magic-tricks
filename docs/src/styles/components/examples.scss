@@ -1,0 +1,43 @@
+//
+// === Examples ===
+//
+
+.example {
+	border: 2px dotted rgba(color(black), 0.25);
+	padding: 10px;
+	margin-bottom: 40px;
+}
+
+.example--font-smoothing-off {
+	-webkit-font-smoothing: initial;
+	-moz-osx-font-smoothing: initial;
+}
+
+.example--mle {
+	@include multiLineEllipsis($line-height-body-mobile, 2);
+
+	@include breakpoint(md) {
+		@include multiLineEllipsis($line-height-body-desktop, 2);
+	}
+}
+
+.example--select {
+	@include selection {
+		background: rgba(red, 0.95);
+		color: white;
+	}
+}
+
+.example--placeholder {
+	border: 1px solid currentColor;
+	border-radius: 2px;
+	padding: 5px;
+
+	@include placeholder {
+		color: green;
+	}
+}
+
+.example--clear {
+	@include clearfix;
+}

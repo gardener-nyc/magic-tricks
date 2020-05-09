@@ -6,11 +6,12 @@ export default () => (
 	<header className="header p1 bg--white bb--black">
 		<div className="row">
 			<div className="col c4 show--md">
-				<Link
-					to="http://gardener.nyc"
+				<a
+					target="_blank"
+					to="https://gardener.nyc"
 					className="mono o50">
 					← gardener.nyc
-				</Link>
+				</a>
 			</div>
 			<div className="col c4--md">
 				<p className="tc">

@@ -11,6 +11,11 @@
 		pointer-events: none;
 	}
 
+	// Empty line
+	.token-line:last-child {
+		display: none;
+	}
+
 	* {
 		@include selection {
 			background: rgba(color(black), 0.95);
@@ -19,10 +24,6 @@
 
 	&.language-terminal {
 		.line-number {
-			display: none;
-		}
-
-		.token-line:last-child {
 			display: none;
 		}
 	}
