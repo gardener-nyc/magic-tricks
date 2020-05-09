@@ -1,5 +1,5 @@
 import React from 'react';
-import scrollTo from '../../../lib/scrollTo';
+import scrollTo from '../../../src/scrollTo';
 
 const scrollToEl = event => {
 	const hashEl = document.getElementById(event.target.getAttribute('href').replace('#', ''));
