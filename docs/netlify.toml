@@ -1,0 +1,11 @@
+[build]
+	command = 'yarn gatsby:build'
+	publish = 'public'
+	functions = 'functions'
+[dev]
+	command = 'yarn gatsby:develop'
+	publish = 'public'
+	functions = 'functions'
+	port = 8000
+	targetPort = 3000
+	functionsPort = 34567

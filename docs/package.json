@@ -1,0 +1,40 @@
+{
+	"name": "magic-tricks-docs",
+	"version": "1.0.0",
+	"main": "index.js",
+	"repository": "git@github.com:gardener-nyc/magic-tricks.git",
+	"author": "Gardener NYC LLC <ian@gardener.nyc>",
+	"license": "none",
+	"private": true,
+	"scripts": {
+		"clean": "rm -rf public && rm -rf .cache",
+		"start": "netlify dev",
+		"gatsby:build": "gatsby build",
+		"gatsby:develop": "gatsby develop -H 0.0.0.0",
+		"gatsby:serve": "gatsby serve -H 0.0.0.0"
+	},
+	"dependencies": {
+		"@mdx-js/mdx": "^1.6.1",
+		"@mdx-js/react": "^1.6.1",
+		"@sanity/block-content-to-react": "^2.0.7",
+		"@sanity/client": "^0.142.0",
+		"babel-eslint": "^10.0.3",
+		"classnames": "^2.2.6",
+		"date-fns": "^2.11.1",
+		"dotenv": "^8.2.0",
+		"eslint": "^6.5.1",
+		"eslint-plugin-react": "^7.16.0",
+		"gatsby": "^2.16.4",
+		"gatsby-plugin-mdx": "^1.2.6",
+		"gatsby-plugin-netlify": "^2.1.22",
+		"gatsby-plugin-react-helmet": "^3.1.13",
+		"gatsby-plugin-sass": "^2.1.20",
+		"magic-tricks": "0.1.13",
+		"netlify-cli": "2.11.13",
+		"node-sass": "^4.12.0",
+		"react": "^16.10.2",
+		"react-dom": "^16.10.2",
+		"react-helmet": "^5.2.1",
+		"react-transition-group": "^4.3.0"
+	}
+}

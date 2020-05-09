@@ -1,0 +1,82 @@
+{
+	"parser": "babel-eslint",
+	"plugins": [
+		"react"
+	],
+	"env": {
+		"node": true,
+		"browser": true,
+		"es6": true
+	},
+	"parserOptions": {
+		"ecmaFeatures": {
+			"modules": true,
+			"jsx": true
+		}
+	},
+	"globals": {
+		"import": false
+	},
+	"extends": "eslint:recommended",
+	"rules": {
+		"comma-dangle": [
+			"off"
+		],
+		"indent-legacy": [
+			"warn",
+			"tab",
+			{"SwitchCase": 1}
+		],
+		"linebreak-style": [
+			"error",
+			"unix"
+		],
+		"quotes": [
+			"warn",
+			"single"
+		],
+		"no-console": [
+			"off"
+		],
+		"no-useless-escape": [
+			"off"
+		],
+		"semi": [
+			"warn",
+			"always"
+		],
+		"no-unused-vars": [
+			"warn",
+			{"vars": "all", "args": "none"}
+		],
+
+		"react/jsx-boolean-value": 1,
+		"react/jsx-indent-props": [1, "tab"],
+		"react/jsx-no-duplicate-props": 1,
+		"react/jsx-no-undef": 1,
+		"react/jsx-uses-react": 1,
+		"react/jsx-uses-vars": 1,
+		"react/no-did-mount-set-state": 1,
+		"react/no-did-update-set-state": 1,
+		"react/no-unknown-property": 1,
+		"react/prop-types": 0,
+		"react/react-in-jsx-scope": 1,
+		"react/self-closing-comp": 1,
+		"react/sort-comp": [
+			"warn", {
+				"order": [
+					"lifecycle",
+					"everything-else",
+					"rendering"
+				],
+				"groups": {
+					"rendering": [
+						"render",
+						"/^render.+$/"
+					]
+				}
+			}
+		],
+		"react/jsx-wrap-multilines": 1
+	}
+}

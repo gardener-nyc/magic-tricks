@@ -1,0 +1,75 @@
+//
+// === Directions ===
+//
+
+$sides: (
+	t : top,
+	b : bottom,
+	l : left,
+	r : right,
+	j : justify,
+);
+
+$alignments: (
+	l : left,
+	r : right,
+	c : center,
+);
+
+//
+// === Colors ===
+//
+
+$all-colors: (
+	white       : #FFF,
+	black       : #000,
+);
+
+//
+// === Breakpoints ===
+//
+
+$breakpoints : (
+	xs  : 400px,
+	sm  : 600px,
+	md  : 800px,
+	lg  : 1000px,
+	xl  : 1200px,
+);
+
+//
+// === Components ===
+//
+
+// Spacer
+$spacer-max: 10;
+$spacer-size: 10px;
+
+// Grid
+$grid-breakpoint: md;
+$grid-column-size: 12;
+$grid-gutter-mobile: 30px;
+$grid-gutter-desktop: 60px;
+
+$grid-gutter-extra: (
+	none   : 0px,
+);
+
+$grid-padding-mobile: 30px;
+$grid-padding-desktop: 60px;
+$grid-max-width: 1920px;
+
+
+//
+// === Typography ===
+//
+
+$typography-breakpoint:    md;
+
+$font-size-body-mobile:    16px;
+$line-height-body-mobile:  24px;
+
+$font-size-body-desktop:   16px;
+$line-height-body-desktop: 24px;
+
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;

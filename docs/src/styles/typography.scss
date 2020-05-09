@@ -1,0 +1,11 @@
+/*
+// === Reset ===
+*/
+
+body {
+	@include font-smoothing;
+	@include body-font-size;
+	font-family: $font-family-system;
+	color: color(black);
+	font-weight: 400;
+}
