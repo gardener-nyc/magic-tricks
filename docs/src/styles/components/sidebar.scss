@@ -1,0 +1,9 @@
+.sidebar {
+	max-height: calc(100vh - #{$header-height});
+	overflow-y: auto;
+}
+
+.sidebar__sticky {
+	position: sticky;
+	top: $header-height;
+}

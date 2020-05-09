@@ -1,3 +1,10 @@
+//                 //
+// === Imports === //
+//                 //
+
+@import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 //                                    //
 // === Import all of Magic Tricks === //
 //                                    //
@@ -55,3 +62,6 @@
 //                     //
 
 @import 'typography';
+@import './components/header';
+@import './components/sidebar';
+@import './components/code';

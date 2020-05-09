@@ -14,7 +14,7 @@ export default ({
 	twitterDescription,
 	twitterImage,
 	pathname = '/',
-	rootUrl = 'https://magictricks.org',
+	rootUrl = 'https://magictricks.gardener.nyc',
 }) => (
 	<Helmet>
 		{metaTitle && (

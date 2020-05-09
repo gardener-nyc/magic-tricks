@@ -1,0 +1,17 @@
+.prism-code {
+	padding: 10px;
+	border-radius: 4px;
+	font-family: $font-family-mono;
+	font-variant-ligatures: none;
+	
+	.line-number {
+		user-select: none;
+		pointer-events: none;
+	}
+
+	* {
+		@include selection {
+			background: rgba(color(black), 0.95);
+		}
+	}
+}

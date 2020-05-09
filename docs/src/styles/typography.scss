@@ -5,7 +5,72 @@
 body {
 	@include font-smoothing;
 	@include body-font-size;
-	font-family: $font-family-system;
+	font-family: $font-family-sans;
 	color: color(black);
 	font-weight: 400;
+}
+
+* {
+	@include selection {
+		background: rgba(color(black), 0.95);
+		color: color(white);
+	}
+}
+
+//
+// === Styles ===
+//
+
+.mono {
+	font-family: $font-family-mono;
+}
+
+//
+// === Links ===
+//
+
+.link--menu {
+	transition: background-color 150ms ease-in-out;
+	border-radius: 4px;
+	padding: 5px;
+
+	&:hover,
+	&:focus,
+	&.active {
+		text-decoration: underline;
+		background-color: rgba(color(black), 0.05);
+	}
+}
+
+//
+// === Rich Text ===
+//
+
+.rich-text {
+	h1, h2, h3, h4, h5, h6,
+	p,
+	ul, ol,
+	img,
+	pre {
+		margin: 20px 0;
+
+		&:first-child {margin-top: 0;}
+		&:last-child  {margin-bottom: 0;}
+	}
+
+	p {
+		max-width: 40em;
+	}
+
+	h1 {
+		font-size: 40px;
+		line-height: 48px;
+		font-weight: 700;
+	}
+
+	h2 {
+		font-size: 32px;
+		line-height: 36px;
+		font-weight: 700;
+	}
 }

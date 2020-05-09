@@ -55,8 +55,8 @@ $grid-gutter-extra: (
 	none   : 0px,
 );
 
-$grid-padding-mobile: 30px;
-$grid-padding-desktop: 60px;
+$grid-padding-mobile: 20px;
+$grid-padding-desktop: 20px;
 $grid-max-width: 1920px;
 
 
@@ -69,7 +69,14 @@ $typography-breakpoint:    md;
 $font-size-body-mobile:    16px;
 $line-height-body-mobile:  24px;
 
-$font-size-body-desktop:   16px;
-$line-height-body-desktop: 24px;
+$font-size-body-desktop:   20px;
+$line-height-body-desktop: 28px;
 
-$font-family-system: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, sans-serif;
+$font-family-mono: 'Space Mono', monospace;
+
+//
+// === Variables ===
+//
+
+$header-height: 45px;
