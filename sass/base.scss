@@ -1,42 +1,42 @@
 // Configuration
-@import 'config';
+@import '~magic-tricks/sass/config';
 
 //                                          //
 // === Put Configuration Overrides Here === //
 //                                          //
 
 // Mixins
-@import 'mixins';
+@import '~magic-tricks/sass/mixins';
 
 // CSS Reset
-@import 'reset';
+@import '~magic-tricks/sass/reset';
 
 // Utilities
-@import 'utils/alignment';
-@import 'utils/background';
-@import 'utils/border';
-@import 'utils/color';
-@import 'utils/cursor';
-@import 'utils/display';
-@import 'utils/float';
-@import 'utils/font-weight';
-@import 'utils/margin';
-@import 'utils/opacity';
-@import 'utils/overflow';
-@import 'utils/pointer-events';
-@import 'utils/position';
-@import 'utils/size';
-@import 'utils/text-align';
-@import 'utils/transform';
-@import 'utils/transitions';
-@import 'utils/whitespace';
-@import 'utils/z-index';
+@import '~magic-tricks/sass/utils/alignment';
+@import '~magic-tricks/sass/utils/background';
+@import '~magic-tricks/sass/utils/border';
+@import '~magic-tricks/sass/utils/color';
+@import '~magic-tricks/sass/utils/cursor';
+@import '~magic-tricks/sass/utils/display';
+@import '~magic-tricks/sass/utils/float';
+@import '~magic-tricks/sass/utils/font-weight';
+@import '~magic-tricks/sass/utils/margin';
+@import '~magic-tricks/sass/utils/opacity';
+@import '~magic-tricks/sass/utils/overflow';
+@import '~magic-tricks/sass/utils/pointer-events';
+@import '~magic-tricks/sass/utils/position';
+@import '~magic-tricks/sass/utils/size';
+@import '~magic-tricks/sass/utils/text-align';
+@import '~magic-tricks/sass/utils/transform';
+@import '~magic-tricks/sass/utils/transitions';
+@import '~magic-tricks/sass/utils/whitespace';
+@import '~magic-tricks/sass/utils/z-index';
 
 // Utility Components
-@import 'components/flex';
-@import 'components/grid';
-@import 'components/list';
-@import 'components/media';
-@import 'components/spacer';
-@import 'components/visibility';
-@import 'components/visibility';
+@import '~magic-tricks/sass/components/flex';
+@import '~magic-tricks/sass/components/grid';
+@import '~magic-tricks/sass/components/list';
+@import '~magic-tricks/sass/components/media';
+@import '~magic-tricks/sass/components/spacer';
+@import '~magic-tricks/sass/components/visibility';
+@import '~magic-tricks/sass/components/visibility';

@@ -5,6 +5,16 @@ import DocsTableOfContents from '../components/DocsTableOfContents';
 import {MDXProvider} from '@mdx-js/react';
 import CodeBlock from '../components/CodeBlock';
 
+const components = {
+	pre: CodeBlock,
+	h1: props => <h1 {...props} id={props.children} />,
+	h2: props => <h2 {...props} id={props.children} />,
+	h3: props => <h2 {...props} id={props.children} />,
+	h4: props => <h4 {...props} id={props.children} />,
+	h5: props => <h5 {...props} id={props.children} />,
+	h6: props => <h6 {...props} id={props.children} />,
+};
+
 export default ({
 	links,
 	activePathname,
@@ -23,9 +33,7 @@ export default ({
 				</div>
 				<div className="col c8--md c6--lg pt2 pt4--md pb4 rich-text">
 					<MDXProvider
-						components={{
-							pre: CodeBlock
-						}}>
+						components={components}>
 						{children}
 					</MDXProvider>
 				</div>

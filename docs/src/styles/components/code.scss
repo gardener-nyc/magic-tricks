@@ -1,8 +1,10 @@
 .prism-code {
+	font-size: 16px;
 	padding: 10px;
 	border-radius: 4px;
 	font-family: $font-family-mono;
 	font-variant-ligatures: none;
+	overflow-x: auto;
 	
 	.line-number {
 		user-select: none;
@@ -12,6 +14,16 @@
 	* {
 		@include selection {
 			background: rgba(color(black), 0.95);
+		}
+	}
+
+	&.language-terminal {
+		.line-number {
+			display: none;
+		}
+
+		.token-line:last-child {
+			display: none;
 		}
 	}
 }

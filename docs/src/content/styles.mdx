@@ -4,12 +4,182 @@ The following are a collection of atomic/functional styles designed to limit wri
 
 ## Installation
 
-## sup
+Make sure you first have `magic-tricks` installed. Check out the [Getting Started](/docs/getting-started) guide for more details.
 
-Maecenas faucibus mollis interdum. Aenean lacinia bibendum nulla sed consectetur. Nulla vitae elit libero, a pharetra augue. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Cras mattis consectetur purus sit amet fermentum.
-
-```jsx
-const sup = 'sup';
-
-<Test test={test} />
+```terminal
+$ yarn install magic-tricks
 ```
+
+In your main SASS entrypoint, paste the contents of `sass/base.scss`.
+
+```scss
+// Configuration
+@import '~magic-tricks/sass/config';
+
+//                                          //
+// === Put Configuration Overrides Here === //
+//                                          //
+
+// Mixins
+@import '~magic-tricks/sass/mixins';
+
+// CSS Reset
+@import '~magic-tricks/sass/reset';
+
+// Utilities
+@import '~magic-tricks/sass/utils/alignment';
+@import '~magic-tricks/sass/utils/background';
+@import '~magic-tricks/sass/utils/border';
+@import '~magic-tricks/sass/utils/color';
+@import '~magic-tricks/sass/utils/cursor';
+@import '~magic-tricks/sass/utils/display';
+@import '~magic-tricks/sass/utils/float';
+@import '~magic-tricks/sass/utils/font-weight';
+@import '~magic-tricks/sass/utils/margin';
+@import '~magic-tricks/sass/utils/opacity';
+@import '~magic-tricks/sass/utils/overflow';
+@import '~magic-tricks/sass/utils/pointer-events';
+@import '~magic-tricks/sass/utils/position';
+@import '~magic-tricks/sass/utils/size';
+@import '~magic-tricks/sass/utils/text-align';
+@import '~magic-tricks/sass/utils/transform';
+@import '~magic-tricks/sass/utils/transitions';
+@import '~magic-tricks/sass/utils/whitespace';
+@import '~magic-tricks/sass/utils/z-index';
+
+// Utility Components
+@import '~magic-tricks/sass/components/flex';
+@import '~magic-tricks/sass/components/grid';
+@import '~magic-tricks/sass/components/list';
+@import '~magic-tricks/sass/components/media';
+@import '~magic-tricks/sass/components/spacer';
+@import '~magic-tricks/sass/components/visibility';
+@import '~magic-tricks/sass/components/visibility';
+```
+
+## Configuration
+
+To override any default config, import a config file just under the default config import. _You can also comment out any components you do not need._
+
+```scss
+// Configuration
+@import '~magic-tricks/sass/config';
+
+//                                          //
+// === Put Configuration Overrides Here === //
+//                                          //
+@import 'config';
+```
+
+```scss
+// example config.scss
+
+$sides: (
+	t : top,
+	b : bottom,
+	l : left,
+	r : right,
+	j : justify,
+);
+
+$alignments: (
+	l : left,
+	r : right,
+	c : center,
+);
+
+//
+// === Colors ===
+//
+
+$all-colors: (
+	white : #FFF,
+	black : #000,
+);
+
+//
+// === Breakpoints ===
+//
+
+$breakpoints : (
+	xs : 400px,
+	sm : 600px,
+	md : 800px,
+	lg : 1000px,
+	xl : 1200px,
+);
+
+//
+// === Components ===
+//
+
+// Spacer
+$spacer-max: 10;
+$spacer-size: 10px;
+
+// Grid
+$grid-breakpoint: md;
+$grid-column-size: 12;
+$grid-gutter-mobile: 10px;
+$grid-gutter-desktop: 10px;
+
+$grid-gutter-extra: (
+	none : 0px,
+);
+
+$grid-padding-mobile: 10px;
+$grid-padding-desktop: 20px;
+$grid-max-width: 1920px;
+
+
+//
+// === Typography ===
+//
+
+$typography-breakpoint: md;
+
+$font-size-body-mobile: 16px;
+$font-size-body-desktop: 16px;
+
+$line-height-body-mobile: 24px;
+$line-height-body-desktop: 24px;
+```
+
+----
+
+## Reset
+
+There is a complete CSS reset included in magic tricks. It resets all block/inline elements to remove padding/margin etc. _It does not reset the button element._
+
+```scss
+@import '~magic-tricks/sass/reset';
+```
+
+----
+
+## Mixins
+
+```scss
+@import '~magic-tricks/sass/mixins';
+```
+
+```scss
+@mixin font-smoothing() {} // forces font antialiacing
+
+@mixin multiLineEllipsis($line-height, $lines-to-show) {} // allows for a multi-line ellipsis
+
+@mixin selection() {} // targets text selection for styling
+
+@mixin placeholder() {} // targets placeholder for styling
+
+@mixin clearfix() {} // clears all child floats
+
+@mixin scrollbar($scrollbar-height: 5px, $scrollbar-padding: 0px, $thumb-color: black, $track-color: gray) {} // styles overflow scrollbars
+
+@mixin aspect-ratio($width: 1, $height: 1) {} // forces an aspect ratio for a div
+	.aspect__content {} // Use this class to display content within a forced aspect div
+
+@mixin body-font-size() {} // responsive body size with a single breakpoint
+```
+
+----
