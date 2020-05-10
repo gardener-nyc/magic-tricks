@@ -125,6 +125,14 @@ body {
 		border-bottom: 2px dotted rgba(color(black), 0.25);
 		margin: 120px 0;
 	}
+
+	ol, ul {
+		padding-left: 1.5em;
+	}
+
+	ul {
+		list-style-type: square;
+	}
 }
 
 
