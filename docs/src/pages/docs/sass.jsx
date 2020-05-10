@@ -2,7 +2,7 @@ import React from 'react';
 import Seo from '../../components/Seo';
 import Docs from '../../layouts/Docs';
 import allPages from '../../config/pages';
-import Styles, {tableOfContents} from '../../content/styles.mdx';
+import Sass, {tableOfContents} from '../../content/sass.mdx';
 
 export default ({
 	pageContext,
@@ -29,7 +29,7 @@ export default ({
 				activePathname={location.pathname}
 				tableOfContents={tableOfContents()}
 				links={allPages}>
-				<Styles />
+				<Sass />
 			</Docs>
 		</React.Fragment>
 	);

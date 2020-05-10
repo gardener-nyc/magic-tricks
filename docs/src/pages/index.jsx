@@ -1,5 +1,8 @@
 import React from 'react';
 import Seo from '../components/Seo';
+import DocsHeader from '../components/DocsHeader';
+import {version} from '../../../package.json';
+import { Link } from 'gatsby';
 
 export default ({
 	pageContext,
@@ -21,7 +24,23 @@ export default ({
 				twitterImage={seo.twitterImage}
 				pathname={location.pathname}
 			/>
-			home
+			<DocsHeader />
+			<div className="grid-container contained home__container fx fx--col fx--around tc">
+				<div>
+					<h1 className="mono--large mb2">
+						magic tricks <span className="o50">{version}</span>
+					</h1>
+					<p className="mb4">
+						a light bag of tricks to make building websites quick and fun.
+					</p>
+					<Link
+						className="button--primary"
+						title="Get Started"
+						to="/docs">
+						Get Started
+					</Link>
+				</div>
+			</div>
 		</React.Fragment>
 	);
 };

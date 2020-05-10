@@ -43,6 +43,14 @@ body {
 	}
 }
 
+.link--underline {
+	&:hover,
+	&:focus,
+	&.active {
+		text-decoration: underline;
+	}
+}
+
 //
 // === Rich Text ===
 //
@@ -88,7 +96,6 @@ body {
 	}
 
 	em {
-		font-style: italic;
 		background-color: color(yellow);
 		border-radius: 4px;
 		padding: 0.25em;
@@ -118,4 +125,11 @@ body {
 		border-bottom: 2px dotted rgba(color(black), 0.25);
 		margin: 120px 0;
 	}
+}
+
+
+.mono--large {
+	font-family: $font-family-mono;
+	font-size: 40px;
+	line-height: 48px;
 }

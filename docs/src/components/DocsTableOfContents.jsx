@@ -17,6 +17,7 @@ const Toc = ({children}) => (
 			key={index}>
 			<p>
 				<a
+					className="link--underline"
 					onClick={scrollToEl}
 					href={`#${c.title}`}>
 					{c.title}

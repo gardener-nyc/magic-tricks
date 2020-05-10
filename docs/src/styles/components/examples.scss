@@ -41,3 +41,17 @@
 .example--clear {
 	@include clearfix;
 }
+
+.example--scroll {
+	height: 100px;
+	overflow-y: auto;
+	@include scrollbar(20px, 0px, black, gray);
+}
+
+.example--ratio {
+	@include aspect-ratio(1, 1);
+}
+
+.example--ratio-2 {
+	@include aspect-ratio(2, 1);
+}

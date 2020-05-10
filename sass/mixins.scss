@@ -60,6 +60,7 @@
 @mixin aspect-ratio($width: 1, $height: 1) {
 	height: 0;
 	padding-bottom: ($height / $width) * 100%;
+	position: relative;
 
 	.aspect__content {
 		position: absolute;

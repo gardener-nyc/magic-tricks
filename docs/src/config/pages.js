@@ -4,11 +4,11 @@ export default [
 		url: '/docs/getting-started'
 	},
 	{
-		title: 'Styles',
-		url: '/docs/styles'
+		title: 'SASS Utilities',
+		url: '/docs/sass'
 	},
 	{
-		title: 'Utilities',
-		url: '/docs/utilities'
+		title: 'JS Utilities',
+		url: '/docs/js'
 	},
 ];

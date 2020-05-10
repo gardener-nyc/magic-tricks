@@ -1,0 +1,72 @@
+%button {
+	@include font-smoothing;
+	@include body-font-size;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	font-family: $font-family-sans;
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	border: none;
+	background: none;
+	text-align: center;
+	cursor: pointer;
+	user-select: none;
+	appearance: none;
+	color: inherit;
+	
+	&:focus {
+		outline: none;
+	}
+
+	&:disabled,
+	&.disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+
+		&.loading {
+			cursor: wait !important;
+
+			* {
+				cursor: wait !important;
+			}
+		}
+	}
+
+	&.loading {
+		cursor: wait !important;
+
+		* {
+			cursor: wait !important;
+		}
+	}
+
+	&.tl {
+		text-align: left;
+	}
+
+	&.m--auto {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+button {
+	@extend %button;
+}
+
+.button--primary {
+	@extend %button;
+	border-radius: 10px;
+	height: 60px;
+	line-height: 60px;
+	min-width: 150px;
+	padding-top: 0 20px;
+	background: color(white);
+	box-shadow: 0 0 10px rgba(color(black), 0.25);
+	transition: box-shadow 300ms ease-out;
+
+	&:hover,
+	&:focus {
+		box-shadow: 0 0 20px rgba(color(black), 0.3);
+	}
+}

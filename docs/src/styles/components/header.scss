@@ -3,4 +3,11 @@
 	top: 0;
 	left: 0;
 	right: 0;
+	height: $header-height;
+	line-height: $header-height;
+}
+
+.header__height {
+	height: $header-height;
+	line-height: $header-height;
 }
