@@ -36,7 +36,7 @@ export default ({
 					<Link
 						className="button--primary"
 						title="Get Started"
-						to="/docs">
+						to="/docs/getting-started">
 						Get Started
 					</Link>
 				</div>
