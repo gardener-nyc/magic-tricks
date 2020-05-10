@@ -31,7 +31,7 @@ export default ({
 						activePathname={activePathname}
 					/>
 				</div>
-				<div className="col c8--md c6--lg pt2 pt4--md pb4 rich-text">
+				<div className="col c8--md c6--lg pt2 pb4 rich-text">
 					<MDXProvider
 						components={components}>
 						{children}
