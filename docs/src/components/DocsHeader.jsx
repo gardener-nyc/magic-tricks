@@ -33,7 +33,7 @@ export default () => (
 						<p className="tr">
 							<a
 								target="_blank"
-								to="https://github.com/gardener-nyc/magic-tricks"
+								href="https://github.com/gardener-nyc/magic-tricks"
 								className="mono o50">
 								github
 							</a>
