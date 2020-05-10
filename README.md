@@ -25,7 +25,7 @@ $ npm i magic-tricks --save
 All scripts are compiled and found in the `lib` directory. 
 
 ```js
-import capitalize from 'capitalize';
+import capitalize from 'magic-tricks/lib/capitalize';
 
 capitalize('sup') // Sup
 ```
