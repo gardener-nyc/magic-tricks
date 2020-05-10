@@ -1,6 +1,6 @@
-# Magic Tricks
+# magic tricks
 
-Utility belt of magic tricks. 
+A light bag of tricks to make building websites quick and fun.
 * SASS toolkit is 7kb gzipped
 * JS tools are _individually_ transpiled via babel. There is no "opt into all".
 
