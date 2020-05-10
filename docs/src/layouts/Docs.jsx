@@ -38,7 +38,9 @@ export default ({
 					</MDXProvider>
 				</div>
 				<div className="sidebar__sticky col c3 show--lg pt2 pb2">
-					<DocsTableOfContents>{tableOfContents}</DocsTableOfContents>
+					<div className="sidebar">
+						<DocsTableOfContents>{tableOfContents}</DocsTableOfContents>
+					</div>
 				</div>
 			</div>
 		</div>

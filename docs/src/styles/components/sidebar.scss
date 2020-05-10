@@ -1,9 +1,12 @@
 .sidebar {
 	max-height: calc(100vh - #{$header-height});
 	overflow-y: auto;
+	padding-bottom: $header-height;
+	padding-top: 20px;
+	margin-top: -20px;
 }
 
 .sidebar__sticky {
 	position: sticky;
-	top: $header-height;
+	top: $header-height + 10px;
 }
