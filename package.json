@@ -8,8 +8,9 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "babel src --out-dir lib",
-    "release": "yarn build && yarn publish"
+    "build:js": "babel src --out-dir lib",
+    "build:sass": "node build/compileSass.js",
+    "release": "yarn build:js && yarn publish"
   },
   "devDependencies": {
     "@babel/cli": "^7.8.4",
@@ -22,6 +23,8 @@
     "@babel/preset-react": "^7.8.3",
     "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
-    "eslint-plugin-react": "^7.18.0"
+    "eslint-plugin-react": "^7.18.0",
+    "node-gzip": "^1.1.2",
+    "node-sass": "^4.14.1"
   }
 }

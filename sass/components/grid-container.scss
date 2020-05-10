@@ -1,0 +1,63 @@
+
+// Container
+.grid-container {
+	padding-left: $grid-padding-mobile;
+	padding-right: $grid-padding-mobile;
+	margin-left: auto;
+	margin-right: auto;
+
+	@include breakpoint(#{$grid-breakpoint}) {
+		padding-left: $grid-padding-desktop;
+		padding-right: $grid-padding-desktop;
+	}
+
+	&.contained {
+		max-width: $grid-max-width;
+	}
+
+	&.flush {
+		padding: 0;
+	}
+
+	&.padded {
+		padding-left: $grid-padding-mobile;
+		padding-right: $grid-padding-mobile;
+
+		@include breakpoint(#{$grid-breakpoint}) {
+			padding-left: $grid-padding-desktop;
+			padding-right: $grid-padding-desktop;
+		}
+	}
+}
+
+// Responsive Container
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		.grid-container.contained--#{$breakpoint-name} {
+			max-width: $grid-max-width;
+		}
+		.grid-container.flush--#{$breakpoint-name} {
+			padding: 0;
+		}
+		.grid-container.padded--#{$breakpoint-name} {
+			padding-left: $grid-padding-mobile;
+			padding-right: $grid-padding-mobile;
+
+			@include breakpoint(#{$grid-breakpoint}) {
+				padding-left: $grid-padding-desktop;
+				padding-right: $grid-padding-desktop;
+			}
+		}
+	}
+}
+
+// Container reset
+.grid-container-reset {
+	margin-left: -$grid-padding-mobile;
+	margin-right: -$grid-padding-mobile;
+
+	@include breakpoint(#{$grid-breakpoint}) {
+		margin-left: -$grid-padding-desktop;
+		margin-right: -$grid-padding-desktop;
+	}
+}
