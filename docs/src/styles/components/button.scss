@@ -54,13 +54,14 @@ button {
 	@extend %button;
 }
 
-.button--primary {
+.button--primary,
+.rich-text a.button--primary {
 	@extend %button;
 	border-radius: 10px;
 	height: 60px;
 	line-height: 60px;
 	min-width: 150px;
-	padding: 0 20px !important; // rich-text override
+	padding: 0 20px;
 	background: color(white);
 	box-shadow: 0 0 10px rgba(color(black), 0.25);
 	transition: box-shadow 300ms ease-out;

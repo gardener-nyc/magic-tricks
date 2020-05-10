@@ -26,8 +26,10 @@ All scripts are compiled and found in the `lib` directory.
 
 ```js
 import capitalize from 'magic-tricks/lib/capitalize';
+import centsToPrice from 'magic-tricks/lib/centsToPrice';
 
 capitalize('sup') // Sup
+centsToPrice(100) // '$1.00'
 ```
 
 ### Importing SASS
