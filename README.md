@@ -35,10 +35,6 @@ capitalize('sup') // Sup
 All styles are found in the `sass` directory. You can electively import the utilities you'd like to use like so. _Make sure your compiler is set up to alias `~` to `node_modules`_. Check out [SASS](/docs/sass) for more info.
 
 ```scss
-//                 //
-// === Imports === //
-//                 //
-
 // Configuration
 @import '~magic-tricks/sass/config';
 
