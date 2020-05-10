@@ -3,4 +3,5 @@
 node_modules/
 .yarn-cache/
 dist
+lib
 yarn-error.log
