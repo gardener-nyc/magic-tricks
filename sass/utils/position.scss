@@ -1,3 +1,4 @@
-.pr  { position: relative; }
-.pa  { position: absolute; }
-.ps  { position: static; }
+.pr, .rel  { position: relative; }
+.pa, .abs  { position: absolute; }
+.ps, .static  { position: static; }
+.psy, .sticky { position: sticky; }
