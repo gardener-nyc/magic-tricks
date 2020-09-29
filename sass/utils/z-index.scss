@@ -3,7 +3,7 @@
 	z-index: 1;
 }
 
-$opacities: (
+$zindex: (
 	0   : 0,
 	1  : 100,
 	2  : 200,
@@ -17,7 +17,7 @@ $opacities: (
 	10 : 1000,
 );
 
-@each $opacity-name, $opacity-value in $opacities {
+@each $opacity-name, $opacity-value in $zindex {
 	.z#{inspect($opacity-name)} {
 		opacity: $opacity-value;
 	}
