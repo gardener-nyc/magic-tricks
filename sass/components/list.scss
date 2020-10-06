@@ -121,5 +121,35 @@
 				}
 			}
 		}
+
+		// Additional Gutter Sizes
+		@each $gutter-name, $gutter-size in $grid-gutter-extra {
+      .list--vertical--#{$breakpoint-name}.gutter--#{$gutter-name} {
+        > .list__item {
+          margin-bottom: $gutter-size;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+			}
+
+      .list--horizontal--#{$breakpoint-name}.gutter--#{$gutter-name} {
+        > .list__item {
+          margin-right: $gutter-size;
+
+          &:last-child {
+            margin-right: 0;
+          }
+				}
+
+        &.gutter--vertical {
+          margin-bottom: -$gutter-size;
+          > .list__item {
+            margin-bottom: $gutter-size;
+          }
+        }
+      }
+    }
 	}
 }
