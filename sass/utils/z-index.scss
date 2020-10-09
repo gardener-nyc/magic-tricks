@@ -17,8 +17,8 @@ $zindex: (
 	10 : 1000,
 );
 
-@each $opacity-name, $opacity-value in $zindex {
-	.z#{inspect($opacity-name)} {
-		opacity: $opacity-value;
+@each $z-name, $z-value in $zindex {
+	.z#{inspect($z-name)} {
+		opacity: $z-value;
 	}
 }
