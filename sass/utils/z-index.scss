@@ -2,3 +2,23 @@
 	position: relative;
 	z-index: 1;
 }
+
+$zindex: (
+	0   : 0,
+	1  : 100,
+	2  : 200,
+	3  : 300,
+	4  : 400,
+	5  : 500,
+	6  : 600,
+	7  : 700,
+	8  : 800,
+	9  : 900,
+	10 : 1000,
+);
+
+@each $z-name, $z-value in $zindex {
+	.z#{inspect($z-name)} {
+		opacity: $z-value;
+	}
+}

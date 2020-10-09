@@ -38,10 +38,6 @@
 	}
 }
 
-.example--clear {
-	@include clearfix;
-}
-
 .example--scroll {
 	height: 100px;
 	overflow-y: auto;

@@ -1,4 +1,7 @@
-.db  { display: block !important; }
-.dn  { display: none !important; }
-.di  { display: inline !important; }
-.dib { display: inline-block !important; }
+.db  { display: block; }
+.dn  { display: none; }
+.di  { display: inline; }
+.dib { display: inline-block; }
+.df  { display: flex;}
+.dg  { display: grid; }
+.dig { display: inline-grid; }

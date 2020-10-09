@@ -26,14 +26,6 @@
 	&:-moz-placeholder { @content; }
 }
 
-@mixin clearfix {
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
-}
-
 @mixin scrollbar($scrollbar-height: 5px, $scrollbar-padding: 0px, $thumb-color: black, $track-color: gray) {
 	&::-webkit-scrollbar {
 		height: (($scrollbar-padding * 2) + $scrollbar-height);
