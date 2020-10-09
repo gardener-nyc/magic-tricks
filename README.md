@@ -69,9 +69,9 @@ All styles are found in the `sass` directory. You can electively import the util
 @import '~magic-tricks/sass/utils/transitions';
 @import '~magic-tricks/sass/utils/whitespace';
 @import '~magic-tricks/sass/utils/z-index';
+@import '~magic-tricks/sass/utils/flex';
 
 // Utility Components
-@import '~magic-tricks/sass/components/flex';
 @import '~magic-tricks/sass/components/grid';
 @import '~magic-tricks/sass/components/grid-container';
 @import '~magic-tricks/sass/components/inline-grid';
