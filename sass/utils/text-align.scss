@@ -1,15 +1,3 @@
-.tac {
-	text-align: center;
-}
-
-.tal {
-	text-align: left;
-}
-
-.tar {
-	text-align: right;
-}
-
 @each $alignment-name, $alignment-direction in $alignments {
 	.t#{$alignment-name} {
 		text-align: #{$alignment-direction};
