@@ -64,7 +64,6 @@ All styles are found in the `sass` directory. You can electively import the util
 @import '~magic-tricks/sass/utils/overflow';
 @import '~magic-tricks/sass/utils/pointer-events';
 @import '~magic-tricks/sass/utils/position';
-@import '~magic-tricks/sass/utils/size';
 @import '~magic-tricks/sass/utils/text-align';
 @import '~magic-tricks/sass/utils/transform';
 @import '~magic-tricks/sass/utils/transitions';
@@ -79,7 +78,6 @@ All styles are found in the `sass` directory. You can electively import the util
 @import '~magic-tricks/sass/components/list';
 @import '~magic-tricks/sass/components/media';
 @import '~magic-tricks/sass/components/spacer';
-@import '~magic-tricks/sass/components/visibility';
 @import '~magic-tricks/sass/components/visibility';
 ```
 
