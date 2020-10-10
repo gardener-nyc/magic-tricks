@@ -95,6 +95,7 @@
 			> .list__item {
 				display: inline-block;
 				margin-right: $grid-gutter-desktop;
+				margin-bottom: 0;
 				
 				&:last-child {
 					margin-right: 0;
@@ -114,6 +115,7 @@
 		.list--vertical--#{$breakpoint-name} {
 			> .list__item {
 				display: block;
+				margin-right: 0;
 				margin-bottom: $grid-gutter-desktop;
 				
 				&:last-child {
@@ -124,32 +126,35 @@
 
 		// Additional Gutter Sizes
 		@each $gutter-name, $gutter-size in $grid-gutter-extra {
-      .list--vertical--#{$breakpoint-name}.gutter--#{$gutter-name} {
-        > .list__item {
-          margin-bottom: $gutter-size;
+			.list--vertical--#{$breakpoint-name}.gutter--#{$gutter-name} {
+				> .list__item {
+					margin-bottom: $gutter-size;
+					margin-right: 0;
 
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
+					&:last-child {
+						margin-bottom: 0;
+					}
+				}
 			}
 
-      .list--horizontal--#{$breakpoint-name}.gutter--#{$gutter-name} {
-        > .list__item {
-          margin-right: $gutter-size;
+			.list--horizontal--#{$breakpoint-name}.gutter--#{$gutter-name} {
+				> .list__item {
+					margin-right: $gutter-size;
+					margin-bottom: 0;
 
-          &:last-child {
-            margin-right: 0;
-          }
+					&:last-child {
+						margin-right: 0;
+					}
 				}
 
-        &.gutter--vertical {
-          margin-bottom: -$gutter-size;
-          > .list__item {
-            margin-bottom: $gutter-size;
-          }
-        }
-      }
-    }
+				&.gutter--vertical {
+					margin-bottom: -$gutter-size;
+					
+					> .list__item {
+						margin-bottom: $gutter-size;
+					}
+				}
+			}
+		}
 	}
 }
