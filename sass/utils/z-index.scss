@@ -19,6 +19,6 @@ $zindex: (
 
 @each $z-name, $z-value in $zindex {
 	.z#{inspect($z-name)} {
-		opacity: $z-value;
+		z-index: $z-value;
 	}
 }
