@@ -25,7 +25,7 @@ export default ({
 				pathname={location.pathname}
 			/>
 			<DocsHeader />
-			<div className="grid-container contained home__container fx fx--col fx--around tc">
+			<div className="grid-container contained home__container df fdc jcc tc">
 				<div>
 					<h1 className="mono--large mb2">
 						magic tricks <span className="o50">{version}</span>
