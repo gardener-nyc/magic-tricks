@@ -68,7 +68,8 @@ $spacer-size: 10px;
 
 // Grid
 $grid-breakpoint: md;
-$grid-column-size: 12;
+$grid-column-size-mobile: 4;
+$grid-column-size-desktop: 12;
 $grid-gutter-mobile: 10px;
 $grid-gutter-desktop: 10px;
 

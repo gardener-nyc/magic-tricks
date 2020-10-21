@@ -1,9 +1,11 @@
 .gr {
 	display: grid;
-	grid-gap: $grid-gutter-mobile;
+	grid-template-columns: repeat($grid-column-size-mobile, 1fr);
+	column-gap: $grid-gutter-mobile;
 
-	@include breakpoint(#{$grid-breakpoint}) {
-		grid-gap: $grid-gutter-desktop;
+	@include breakpoint(lg) {
+		grid-template-columns: repeat($grid-column-size-desktop, 1fr);
+		column-gap: $grid-gutter-desktop;
 	}
 }
 
@@ -24,7 +26,6 @@
 		}
 	}
 }
-
 
 // Alignment
 .gr.jl {justify-items: start;}
@@ -57,18 +58,20 @@
 
 // Column Sizes
 @for $i from 0 through $grid-column-size {
-	.gc.c#{$i} {
-		grid-column: span $grid-column-size;
-	}
+	.gcs#{$i} { grid-column-start: $i; }
+	.gce#{$i} { grid-column-end: $i; }
+	.gcssp#{$i} { grid-column-start:  span $i; }
+	.gcesp#{$i} { grid-column-end: span $i; }
 }
 
 // Responsive Column Sizes
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 	@media (min-width: #{$breakpoint-size}) {
 		@for $i from 0 through $grid-column-size {
-			.gc.c#{$i}--#{$breakpoint-name} {
-				grid-column: span $grid-column-size;
-			}
+			.gcs#{$i}--#{$breakpoint-name} { grid-column-start: $i; }
+			.gce#{$i}--#{$breakpoint-name} { grid-column-end: $i; }
+			.gcssp#{$i}--#{$breakpoint-name} { grid-column-start:  span $i; }
+			.gcesp#{$i}--#{$breakpoint-name} { grid-column-end: span $i; }
 		}
 	}
 }
