@@ -69,10 +69,8 @@ $spacer-size: 10px;
 // Grid
 $grid-breakpoint: md;
 
-// $grid-column-size-mobile: 12;
-// $grid-column-size-desktop: 12;
-// $grid-gutter-mobile: 10px;
-// $grid-gutter-desktop: 10px;
+$grid-gutter-mobile: 10px;
+$grid-gutter-desktop: 10px;
 
 $grid-column-sizes: (
 	xs:  12,
@@ -87,6 +85,8 @@ $grid-gutter-sizes: (
 $grid-gutter-extra: (
 	none : 0px,
 );
+
+$grid-column-max: max(map-values($grid-column-sizes)...);
 
 $grid-padding-mobile: 10px;
 $grid-padding-desktop: 20px;

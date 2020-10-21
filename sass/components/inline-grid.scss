@@ -178,18 +178,18 @@
 }
 
 // Column Sizes
-@for $i from 0 through $grid-column-size {
+@for $i from 0 through $grid-column-max {
 	.col.c#{$i} {
-		width: (100% / $grid-column-size) * $i;
+		width: (100% / $grid-column-max) * $i;
 	}
 }
 
 // Responsive Column Sizes
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 	@media (min-width: #{$breakpoint-size}) {
-		@for $i from 0 through $grid-column-size {
+		@for $i from 0 through $grid-column-max {
 			.col.c#{$i}--#{$breakpoint-name} {
-				width: (100% / $grid-column-size) * $i;
+				width: (100% / $grid-column-max) * $i;
 			}
 		}
 	}
