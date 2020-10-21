@@ -1,0 +1,69 @@
+.fw { flex-wrap: wrap }
+
+//
+// === Direction ===
+//
+
+
+.fdr { flex-direction: row; }
+
+.fdrr { flex-direction: row-reverse; }
+
+.fdc { flex-direction: column; }
+
+.fdcr { flex-direction: column-reverse; }
+
+//
+// === Align ===
+//
+
+
+.ais { align-items: flex-start }
+
+.aie { align-items: flex-end }
+
+.aic { align-items: center }
+
+.aib { align-items: baseline }
+
+//
+// === Justify ===
+//
+
+
+.jcs { justify-content: flex-start }
+
+.jce { justify-content: flex-end }
+
+.jcc { justify-content: center }
+
+.jcb { justify-content: space-between }
+
+.fa {
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0;
+}
+
+
+// Responsive Directions
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		.fdc--#{$breakpoint-name} {
+			flex-direction: column;
+		}
+
+		.fdcr--#{$breakpoint-name} {
+			flex-direction: column-reverse;
+		}
+
+		.fdr--#{$breakpoint-name} {
+			flex-direction: row;
+		}
+
+		.fdrr--#{$breakpoint-name} {
+			flex-direction: row-reverse;
+		}
+	}
+}
+

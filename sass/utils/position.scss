@@ -1,3 +1,16 @@
 .pr  { position: relative; }
 .pa  { position: absolute; }
 .ps  { position: static; }
+.psy { position: sticky; }
+.pf  { position: fixed; }
+
+.fill, .top { top: 0 }
+.fill, .bottom { bottom: 0 }
+.fill, .left { left: 0 }
+.fill, .right { right: 0 }
+.x { width: 100% }
+.y { height: 100% }
+.cx {
+	max-width: 100%;
+	height: auto;
+}

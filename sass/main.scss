@@ -29,20 +29,18 @@
 @import 'utils/overflow';
 @import 'utils/pointer-events';
 @import 'utils/position';
-@import 'utils/size';
 @import 'utils/text-align';
 @import 'utils/transform';
 @import 'utils/transitions';
 @import 'utils/whitespace';
 @import 'utils/z-index';
+@import 'utils/flex';
 
 // Utility Components
-@import 'components/flex';
 @import 'components/grid';
 @import 'components/grid-container';
 @import 'components/inline-grid';
 @import 'components/list';
 @import 'components/media';
 @import 'components/spacer';
-@import 'components/visibility';
 @import 'components/visibility';
