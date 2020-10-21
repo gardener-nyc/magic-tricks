@@ -67,3 +67,19 @@
 	}
 }
 
+
+// Grow and Shrink
+
+.fs0 {flex-shrink: 0;}
+.fs1 {flex-shrink: 1;}
+.fg0 {flex-grow: 0;}
+.fg1 {flex-grow: 1;}
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		.fs0--#{$breakpoint-name} {flex-shrink: 0;}
+		.fs1--#{$breakpoint-name} {flex-shrink: 1;}
+		.fg0--#{$breakpoint-name} {flex-grow: 0;}
+		.fg1--#{$breakpoint-name} {flex-grow: 1;}
+	}
+}
