@@ -1,11 +1,20 @@
-.gr {
-	display: grid;
-	grid-template-columns: repeat($grid-column-size-mobile, 1fr);
-	column-gap: $grid-gutter-mobile;
+@each $grid-column-size-name, $grid-column-size in $grid-column-sizes {
+	.gr--#{$grid-column-size-name} {
+		display: grid;
+		grid-template-columns: repeat($grid-column-size, 1fr);
+		column-gap: map-get($grid-gutter-sizes, $grid-column-size-name);
+	}
+}
 
-	@include breakpoint(lg) {
-		grid-template-columns: repeat($grid-column-size-desktop, 1fr);
-		column-gap: $grid-gutter-desktop;
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		@each $grid-column-size-name, $grid-column-size in $grid-column-sizes {
+			.gr--#{$grid-column-size-name}--#{$breakpoint-name} {
+				display: grid;
+				grid-template-columns: repeat($grid-column-size, 1fr);
+				column-gap: map-get($grid-gutter-sizes, $grid-column-size-name);
+			}
+		}
 	}
 }
 
@@ -57,7 +66,7 @@
 }
 
 // Column Sizes
-@for $i from 0 through $grid-column-size {
+@for $i from 0 through max(map-values($grid-column-sizes)...) {
 	.gcs#{$i} { grid-column-start: $i; }
 	.gce#{$i} { grid-column-end: $i; }
 	.gcssp#{$i} { grid-column-start:  span $i; }
@@ -67,7 +76,7 @@
 // Responsive Column Sizes
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 	@media (min-width: #{$breakpoint-size}) {
-		@for $i from 0 through $grid-column-size {
+		@for $i from 0 through max(map-values($grid-column-sizes)...) {
 			.gcs#{$i}--#{$breakpoint-name} { grid-column-start: $i; }
 			.gce#{$i}--#{$breakpoint-name} { grid-column-end: $i; }
 			.gcssp#{$i}--#{$breakpoint-name} { grid-column-start:  span $i; }
