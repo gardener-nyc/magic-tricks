@@ -24,7 +24,7 @@
 .list--horizontal {
 	> .list__item {
 		display: inline-block;
-		margin-right: $grid-gutter-desktop;
+		margin-right: $inline-grid-gutter-desktop;
 		
 		&:last-child {
 			margin-right: 0;
@@ -32,9 +32,9 @@
 	}
 	
 	&.gutter--vertical {
-		margin-bottom: -$grid-gutter-desktop;
+		margin-bottom: -$inline-grid-gutter-desktop;
 		> .list__item {
-			margin-bottom: $grid-gutter-desktop;
+			margin-bottom: $inline-grid-gutter-desktop;
 		}
 	}
 }
@@ -43,7 +43,7 @@
 .list--vertical {
 	> .list__item {
 		display: block;
-		margin-bottom: $grid-gutter-desktop;
+		margin-bottom: $inline-grid-gutter-desktop;
 		
 		&:last-child {
 			margin-bottom: 0;
@@ -59,7 +59,7 @@
 }
 
 // Extra Gutter Sizes
-@each $gutter-name, $gutter-size in $grid-gutter-extra {
+@each $gutter-name, $gutter-size in $inline-grid-gutter-extra {
 	.list--vertical.gutter--#{$gutter-name} {
 		> .list__item {
 			margin-bottom: $gutter-size;
@@ -94,7 +94,7 @@
 		.list--horizontal--#{$breakpoint-name} {
 			> .list__item {
 				display: inline-block;
-				margin-right: $grid-gutter-desktop;
+				margin-right: $inline-grid-gutter-desktop;
 				margin-bottom: 0;
 				
 				&:last-child {
@@ -103,10 +103,10 @@
 			}
 			
 			&.gutter--vertical {
-				margin-bottom: -$grid-gutter-desktop;
+				margin-bottom: -$inline-grid-gutter-desktop;
 				
 				> .list__item {
-					margin-bottom: $grid-gutter-desktop;
+					margin-bottom: $inline-grid-gutter-desktop;
 				}
 			}
 		}
@@ -116,7 +116,7 @@
 			> .list__item {
 				display: block;
 				margin-right: 0;
-				margin-bottom: $grid-gutter-desktop;
+				margin-bottom: $inline-grid-gutter-desktop;
 				
 				&:last-child {
 					margin-bottom: 0;
@@ -125,7 +125,7 @@
 		}
 
 		// Additional Gutter Sizes
-		@each $gutter-name, $gutter-size in $grid-gutter-extra {
+		@each $gutter-name, $gutter-size in $inline-grid-gutter-extra {
 			.list--vertical--#{$breakpoint-name}.gutter--#{$gutter-name} {
 				> .list__item {
 					margin-bottom: $gutter-size;

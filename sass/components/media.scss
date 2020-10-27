@@ -50,7 +50,7 @@
 // === Gutter ===
 //
 
-@each $gutter-name, $gutter-size in $grid-gutter-extra {
+@each $gutter-name, $gutter-size in $inline-grid-gutter-extra {
 	.media.media--horizontal.media--forward.gutter--#{$gutter-name} {
 		> .media__fixed {
 			margin-right: $gutter-size;

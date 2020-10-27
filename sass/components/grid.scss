@@ -44,6 +44,18 @@
 .gr.am {align-items: center;}
 .gr.ab {align-items: end;}
 
+// Responsive Alignment
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		.gr.jl--#{$breakpoint-name} {justify-items: start;}
+		.gr.jc--#{$breakpoint-name} {justify-items: center;}
+		.gr.jr--#{$breakpoint-name} {justify-items: end;}
+		.gr.at--#{$breakpoint-name} {align-items: start;}
+		.gr.am--#{$breakpoint-name} {align-items: center;}
+		.gr.ab--#{$breakpoint-name} {align-items: end;}
+	}
+}
+
 // Column Direction
 .gr.rev {
 	direction: rtl;
@@ -69,7 +81,7 @@
 @for $i from 0 through $grid-column-max {
 	.gcs#{$i} { grid-column-start: $i; }
 	.gce#{$i} { grid-column-end: $i; }
-	.gcssp#{$i} { grid-column-start:  span $i; }
+	.gcssp#{$i} { grid-column-start: span $i; }
 	.gcesp#{$i} { grid-column-end: span $i; }
 }
 
@@ -79,7 +91,7 @@
 		@for $i from 0 through $grid-column-max {
 			.gcs#{$i}--#{$breakpoint-name} { grid-column-start: $i; }
 			.gce#{$i}--#{$breakpoint-name} { grid-column-end: $i; }
-			.gcssp#{$i}--#{$breakpoint-name} { grid-column-start:  span $i; }
+			.gcssp#{$i}--#{$breakpoint-name} { grid-column-start: span $i; }
 			.gcesp#{$i}--#{$breakpoint-name} { grid-column-end: span $i; }
 		}
 	}

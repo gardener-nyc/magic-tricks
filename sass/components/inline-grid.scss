@@ -1,52 +1,52 @@
 .row {
-	margin-left: $grid-gutter-mobile / -2;
-	margin-right: $grid-gutter-mobile / -2;
+	margin-left: $inline-grid-gutter-mobile / -2;
+	margin-right: $inline-grid-gutter-mobile / -2;
 	list-style: none;
 	min-height: 1px;
 	vertical-align: top;
 	font-size: 0;
 	line-height: 0;
 
-	@include breakpoint(#{$grid-breakpoint}) {
-		margin-left: $grid-gutter-desktop / -2;
-		margin-right: $grid-gutter-desktop / -2;
+	@include breakpoint(#{$inline-grid-breakpoint}) {
+		margin-left: $inline-grid-gutter-desktop / -2;
+		margin-right: $inline-grid-gutter-desktop / -2;
 	}
 
 	> .col {
 		@include body-font-size;
 		display: inline-block;
 		width: 100%;
-		padding-left: $grid-gutter-mobile / 2;
-		padding-right: $grid-gutter-mobile / 2;
+		padding-left: $inline-grid-gutter-mobile / 2;
+		padding-right: $inline-grid-gutter-mobile / 2;
 		box-sizing: inherit;
 		vertical-align: top;
 
-		@include breakpoint(#{$grid-breakpoint}) {
-			padding-left: $grid-gutter-desktop / 2;
-			padding-right: $grid-gutter-desktop / 2;
+		@include breakpoint(#{$inline-grid-breakpoint}) {
+			padding-left: $inline-grid-gutter-desktop / 2;
+			padding-right: $inline-grid-gutter-desktop / 2;
 		}
 	}
 }
 
 // Vertical Gutter
 .row.gutter--vertical {
-	margin-bottom: -$grid-gutter-mobile;
+	margin-bottom: -$inline-grid-gutter-mobile;
 	
 	> .col {
-		padding-bottom: $grid-gutter-mobile;
+		padding-bottom: $inline-grid-gutter-mobile;
 	}
 
-	@include breakpoint(#{$grid-breakpoint}) {
-		margin-bottom: -$grid-gutter-desktop;
+	@include breakpoint(#{$inline-grid-breakpoint}) {
+		margin-bottom: -$inline-grid-gutter-desktop;
 	
 		> .col {
-			padding-bottom: $grid-gutter-desktop;
+			padding-bottom: $inline-grid-gutter-desktop;
 		}
 	}
 }
 
 // Gutter options
-@each $gutter-name, $gutter-size in $grid-gutter-extra {
+@each $gutter-name, $gutter-size in $inline-grid-gutter-extra {
 	.row.gutter--#{$gutter-name} {
 		margin-left: $gutter-size / -2;
 		margin-right: $gutter-size / -2;
@@ -68,7 +68,7 @@
 // Responsive Gutter
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 	@media (min-width: #{$breakpoint-size}) {
-		@each $gutter-name, $gutter-size in $grid-gutter-extra {
+		@each $gutter-name, $gutter-size in $inline-grid-gutter-extra {
 			.row.gutter--#{$gutter-name}--#{$breakpoint-name} {
 				margin-left: $gutter-size / -2;
 				margin-right: $gutter-size / -2;
@@ -178,18 +178,18 @@
 }
 
 // Column Sizes
-@for $i from 0 through $grid-column-max {
+@for $i from 0 through $inline-grid-column-size {
 	.col.c#{$i} {
-		width: (100% / $grid-column-max) * $i;
+		width: (100% / $inline-grid-column-size) * $i;
 	}
 }
 
 // Responsive Column Sizes
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 	@media (min-width: #{$breakpoint-size}) {
-		@for $i from 0 through $grid-column-max {
+		@for $i from 0 through $inline-grid-column-size {
 			.col.c#{$i}--#{$breakpoint-name} {
-				width: (100% / $grid-column-max) * $i;
+				width: (100% / $inline-grid-column-size) * $i;
 			}
 		}
 	}

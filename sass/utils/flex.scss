@@ -6,11 +6,8 @@
 
 
 .fdr { flex-direction: row; }
-
 .fdrr { flex-direction: row-reverse; }
-
 .fdc { flex-direction: column; }
-
 .fdcr { flex-direction: column-reverse; }
 
 //
@@ -19,11 +16,8 @@
 
 
 .ais { align-items: flex-start }
-
 .aie { align-items: flex-end }
-
 .aic { align-items: center }
-
 .aib { align-items: baseline }
 
 //
@@ -32,51 +26,51 @@
 
 
 .jcs { justify-content: flex-start }
-
 .jce { justify-content: flex-end }
-
 .jcc { justify-content: center }
-
 .jcb { justify-content: space-between }
 
 .fa {
-  flex: 1 1 auto;
-  min-width: 0;
-  min-height: 0;
+	flex: 1 1 auto;
+	min-width: 0;
+	min-height: 0;
 }
 
-
-// Responsive Directions
-@each $breakpoint-name, $breakpoint-size in $breakpoints {
-	@media (min-width: #{$breakpoint-size}) {
-		.fdc--#{$breakpoint-name} {
-			flex-direction: column;
-		}
-
-		.fdcr--#{$breakpoint-name} {
-			flex-direction: column-reverse;
-		}
-
-		.fdr--#{$breakpoint-name} {
-			flex-direction: row;
-		}
-
-		.fdrr--#{$breakpoint-name} {
-			flex-direction: row-reverse;
-		}
-	}
-}
-
-
-// Grow and Shrink
+//
+// === Grow + Shrink ===
+//
 
 .fs0 {flex-shrink: 0;}
 .fs1 {flex-shrink: 1;}
 .fg0 {flex-grow: 0;}
 .fg1 {flex-grow: 1;}
 
+// Responsive Flex
 @each $breakpoint-name, $breakpoint-size in $breakpoints {
 	@media (min-width: #{$breakpoint-size}) {
+		.fw--#{$breakpoint-name} { flex-wrap: wrap }
+		
+		.fdr--#{$breakpoint-name} { flex-direction: row; }
+		.fdrr--#{$breakpoint-name} { flex-direction: row-reverse; }
+		.fdc--#{$breakpoint-name} { flex-direction: column; }
+		.fdcr--#{$breakpoint-name} { flex-direction: column-reverse; }
+
+		.ais--#{$breakpoint-name} { align-items: flex-start }
+		.aie--#{$breakpoint-name} { align-items: flex-end }
+		.aic--#{$breakpoint-name} { align-items: center }
+		.aib--#{$breakpoint-name} { align-items: baseline }
+
+		.jcs--#{$breakpoint-name} { justify-content: flex-start }
+		.jce--#{$breakpoint-name} { justify-content: flex-end }
+		.jcc--#{$breakpoint-name} { justify-content: center }
+		.jcb--#{$breakpoint-name} { justify-content: space-between }
+		
+		.fa--#{$breakpoint-name} {
+			flex: 1 1 auto;
+			min-width: 0;
+			min-height: 0;
+		}
+
 		.fs0--#{$breakpoint-name} {flex-shrink: 0;}
 		.fs1--#{$breakpoint-name} {flex-shrink: 1;}
 		.fg0--#{$breakpoint-name} {flex-grow: 0;}

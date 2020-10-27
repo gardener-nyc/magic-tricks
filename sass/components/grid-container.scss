@@ -6,7 +6,7 @@
 	margin-left: auto;
 	margin-right: auto;
 
-	@include breakpoint(#{$grid-breakpoint}) {
+	@include breakpoint(#{$inline-grid-breakpoint}) {
 		padding-left: $grid-padding-desktop;
 		padding-right: $grid-padding-desktop;
 	}
@@ -23,7 +23,7 @@
 		padding-left: $grid-padding-mobile;
 		padding-right: $grid-padding-mobile;
 
-		@include breakpoint(#{$grid-breakpoint}) {
+		@include breakpoint(#{$inline-grid-breakpoint}) {
 			padding-left: $grid-padding-desktop;
 			padding-right: $grid-padding-desktop;
 		}
@@ -43,7 +43,7 @@
 			padding-left: $grid-padding-mobile;
 			padding-right: $grid-padding-mobile;
 
-			@include breakpoint(#{$grid-breakpoint}) {
+			@include breakpoint(#{$inline-grid-breakpoint}) {
 				padding-left: $grid-padding-desktop;
 				padding-right: $grid-padding-desktop;
 			}
@@ -56,7 +56,7 @@
 	margin-left: -$grid-padding-mobile;
 	margin-right: -$grid-padding-mobile;
 
-	@include breakpoint(#{$grid-breakpoint}) {
+	@include breakpoint(#{$inline-grid-breakpoint}) {
 		margin-left: -$grid-padding-desktop;
 		margin-right: -$grid-padding-desktop;
 	}
