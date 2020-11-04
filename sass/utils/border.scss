@@ -11,3 +11,15 @@
 		}
 	}
 }
+
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@media (min-width: #{$breakpoint-size}) {
+		@each $color-name, $color-value in $all-colors {
+			@each $side-name, $side-direction in $sides {
+				.b#{inspect($side-name)}--#{inspect($color-name)}--#{$breakpoint-name} {
+					border-#{$side-direction}: 1px solid $color-value;
+				}
+			}
+		}
+	}
+}
