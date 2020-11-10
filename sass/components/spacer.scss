@@ -22,8 +22,8 @@ $sides: (
 	}
 }
 
-@for $i from 0 through $spacer-max {
-	@each $breakpoint-name, $breakpoint-size in $breakpoints {
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@for $i from 0 through $spacer-max {
 		@media (min-width: #{$breakpoint-size}) {
 			.m#{$i}--#{$breakpoint-name} { margin:  $i * $spacer-size; }
 			.p#{$i}--#{$breakpoint-name} { padding: $i * $spacer-size; }

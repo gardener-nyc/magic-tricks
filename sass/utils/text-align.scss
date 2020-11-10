@@ -4,8 +4,8 @@
 	}
 }
 
-@each $alignment-name, $alignment-direction in $alignments {
-	@each $breakpoint-name, $breakpoint-size in $breakpoints {
+@each $breakpoint-name, $breakpoint-size in $breakpoints {
+	@each $alignment-name, $alignment-direction in $alignments {
 		@media (min-width: #{$breakpoint-size}) {
 			.t#{$alignment-name}--#{$breakpoint-name} {
 				text-align: #{$alignment-direction};
