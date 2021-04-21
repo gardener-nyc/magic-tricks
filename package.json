@@ -1,6 +1,6 @@
 {
   "name": "magic-tricks",
-  "version": "0.3.2",
+  "version": "0.4.0",
   "description": "Utility belt of magic tricks",
   "main": "index.js",
   "repository": "git@github.com:gardener-nyc/magic-tricks.git",
