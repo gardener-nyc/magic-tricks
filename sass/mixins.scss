@@ -1,3 +1,37 @@
+// Config Getters
+
+@function color($color-name) {
+	$color-found: map-has-key($all-colors, $color-name);
+	@if ($color-found == true) {
+		@return map-get($all-colors, $color-name);
+	} @else {
+		@warn "Color " + #{$color-name} + " doesn't exist.";
+	}
+}
+
+@mixin breakpoint($size) {
+	$breakpoint-found: map-has-key($breakpoints, $size);
+	@if ($breakpoint-found == true) {
+		$breakpoint: map-get($breakpoints, $size);
+		@media (min-width: #{$breakpoint}) {
+			@content;
+		}
+	} @else {
+		@warn "Breakpoint size " + #{$size} + " doesn't exist.";
+	}
+}
+
+@function gutter($gutter-name) {
+	$gutter-found: map-has-key($inline-grid-gutter-extra, $gutter-name);
+	@if ($gutter-found == true) {
+		@return map-get($inline-grid-gutter-extra, $gutter-name);
+	} @else {
+		@warn "Gutter " + #{$gutter-name} + " doesn't exist.";
+	}
+}
+
+// Mixins
+
 @mixin font-smoothing() {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
