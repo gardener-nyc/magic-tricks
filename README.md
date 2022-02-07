@@ -1,3 +1,6 @@
+# NO LONGER MAINTAINED
+We recommend you use [https://tailwindcss.com/](Tailwind).
+
 # magic tricks
 
 A light bag of tricks to make building websites quick and fun.
