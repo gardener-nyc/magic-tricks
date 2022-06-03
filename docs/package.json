@@ -25,7 +25,7 @@
 		"eslint": "^6.5.1",
 		"eslint-plugin-react": "^7.16.0",
 		"gatsby": "^2.16.4",
-		"gatsby-plugin-mdx": "^1.2.6",
+		"gatsby-plugin-mdx": "^2.14.1",
 		"gatsby-plugin-netlify": "^2.1.22",
 		"gatsby-plugin-react-helmet": "^3.1.13",
 		"gatsby-plugin-sass": "^2.1.20",
